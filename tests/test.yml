@@ -1,0 +1,15 @@
+monitoring:
+  alert-usage: 80
+  platform: telegram
+  api-key: api-key
+
+clean-policy:
+  usage: 85
+  path-fileformat:
+    include:
+      - "/data/example/logs:*.log"
+      - "/data/dump/*:*"
+    exclude:
+      - "/data/dump/*:*.sh"
+  time: "now-5"
+  auto: true

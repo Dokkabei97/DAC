@@ -5,11 +5,11 @@ monitoring:
 
 clean-policy:
   usage: 85
-  path-fileformat:
+  path-file-format:
     include:
       - "/data/example/logs:*.log"
       - "/data/dump/*:*"
     exclude:
       - "/data/dump/*:*.sh"
-  time: "now-5"
+  schedule: 0 8 * * 2
   auto: true
